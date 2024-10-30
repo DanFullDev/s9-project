@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './delete-form.component.html',
-  styleUrl: './delete-form.component.css'
+  styleUrl: './delete-form.component.scss'
 })
 export class DeleteFormComponent {
 

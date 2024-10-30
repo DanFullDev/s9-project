@@ -2,10 +2,10 @@
 
 module.exports = {
   content: [
-    "./src/**/*.{html,ts}", // Add all HTML and TypeScript files
+    "./src/**/*.{html,ts,scss}"
   ],
   theme: {
-    extend: {},
+    extend: {}
   },
   plugins: [],
 };

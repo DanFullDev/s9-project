@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './create-form.component.html',
-  styleUrl: './create-form.component.css'
+  styleUrl: './create-form.component.scss'
 })
 export class CreateFormComponent {
 

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DeleteModalComponent } from './delete-modal.component';
+import { PaginationComponent } from './pagination.component';
 
-describe('DeleteModalComponent', () => {
-  let component: DeleteModalComponent;
-  let fixture: ComponentFixture<DeleteModalComponent>;
+describe('PaginationComponent', () => {
+  let component: PaginationComponent;
+  let fixture: ComponentFixture<PaginationComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [DeleteModalComponent]
+      imports: [PaginationComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(DeleteModalComponent);
+    fixture = TestBed.createComponent(PaginationComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

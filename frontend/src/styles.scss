@@ -2,3 +2,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.example__class {
+  @apply text-amber-300 text-6xl;
+}

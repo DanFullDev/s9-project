@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './edit-form.component.html',
-  styleUrl: './edit-form.component.css'
+  styleUrl: './edit-form.component.scss'
 })
 export class EditFormComponent {
 
