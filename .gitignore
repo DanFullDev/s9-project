@@ -5,6 +5,16 @@
 # Ignore build files in Express
 express-backend/build/
 
+# Angular cache
+/.angular/
+
+# Visual Studio Code settings
+/.vscode/
+
+# If these folders are in a specific subdirectory, you might need:
+frontend/.angular/
+frontend/.vscode/
+
 #Rules for all children
 # Compiled output
 /dist
@@ -27,15 +37,15 @@ yarn-error.log
 *.sublime-workspace
 
 # Visual Studio Code
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-.history/*
+*.vscode/*
+*!.vscode/settings.json
+*!.vscode/tasks.json
+*!.vscode/launch.json
+*!.vscode/extensions.json
+*.history/*
 
 # Miscellaneous
-/.angular/cache
+*.angular/cache
 .sass-cache/
 /connect.lock
 /coverage
