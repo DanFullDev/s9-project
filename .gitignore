@@ -1,0 +1,9 @@
+# Main folder .gitignore
+# Ignore node_modules across all projects
+node_modules/
+
+# Ignore build files in project1
+project1/dist/
+
+# Ignore build files in project2
+project2/build/
