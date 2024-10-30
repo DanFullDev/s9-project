@@ -3,7 +3,7 @@
 node_modules/
 
 # Ignore build files in project1
-project1/dist/
+express-backend/dist/
 
 # Ignore build files in project2
-project2/build/
+frontend/build/
