@@ -6,6 +6,43 @@
   }
 
   .card__description {
-    @apply w-full h-auto p-5 flex flex-col justify-between items-start;
+    @apply w-full h-auto px-5 py-2 flex flex-col justify-between items-start;
+
+    .card__personalInfo {
+      @apply flex flex-col justify-center font-bold;
+
+      .card__personalName {
+        @apply text-lg sm:text-[30px] cursor-pointer hover:text-orange-400;
+      }
+
+      .card__status--alive,
+      .card__status--dead,
+      .card__status--unknown {
+        @apply inline-block w-2 h-2 rounded-full mb-px mr-px;
+      }
+
+      .card__status--alive {
+        @apply bg-green-500;
+      }
+
+      .card__status--dead {
+        @apply bg-red-500;
+      }
+
+      .card__status--unknown {
+        @apply bg-gray-200;
+      }
+    }
+    .card__location,
+    .card__origin {
+      @apply flex flex-col text-base;
+    }
+
+    .card__location,
+    .card__origin {
+      span:first-of-type {
+        @apply text-gray-400 font-bold;
+      }
+    }
   }
 }

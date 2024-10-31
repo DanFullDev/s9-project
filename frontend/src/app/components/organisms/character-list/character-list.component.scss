@@ -1,7 +1,7 @@
 .cardList__container {
-  @apply px-8 py-24 bg-gray-900 h-full text-white grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 place-items-center gap-4;
+  @apply px-8 py-24 bg-gray-900 h-full text-white grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 place-items-center gap-5;
 
   .cardList__card {
-     @apply h-full sm:h-3/4 w-full max-w-lg;
+    @apply h-full w-full sm:h-3/4 max-w-full sm:max-w-xl;
   }
 }

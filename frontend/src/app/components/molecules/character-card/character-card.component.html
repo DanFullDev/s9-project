@@ -2,14 +2,30 @@
   <img [src]="character.image" [alt]="character.name" class="card__image" />
   <div class="card__description">
     <div class="card__personalInfo">
-      <span
-        [class.card__status--alive]="character.status == 'Alive'"
-        [class.card__status--alive]="character.status == 'Dead'"
-      ></span
-      >{{ character.name }} <br />
-      {{ character.status }} - {{ character.species }}
+      <a class="card__personalName" [href]="character.url">
+        {{ character.name }}
+      </a>
+      <span>
+        <span
+          [class.card__status--alive]="character.status == 'Alive'"
+          [class.card__status--dead]="character.status == 'Dead'"
+          [class.card__status--unknown]="character.status == 'unknown'"
+        ></span>
+        {{ character.status | capitalizeFirstLetter }} -
+        {{ character.species | capitalizeFirstLetter }}
+      </span>
     </div>
-    <div class="card__location">{{ character.location.name }}</div>
-    <div class="card__origin">{{ character.origin.name }}</div>
+    <div class="card__location">
+      <span> Last known location: </span>
+      <span>
+        {{ character.location.name | capitalizeFirstLetter }}
+      </span>
+    </div>
+    <div class="card__origin">
+      <span>Originally from:</span>
+      <span>
+        {{ character.origin.name | capitalizeFirstLetter }}
+      </span>
+    </div>
   </div>
 </div>
