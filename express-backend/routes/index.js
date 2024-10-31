@@ -1,9 +1,11 @@
-var express = require('express');
-var router = express.Router();
+const express = require("express");
+const db = require("./public/javascripts/firebaseAdmin.js");
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+const router = express.Router();
+
+router.get("/characters", async function (req, res, next) {});
+router.post("/characters", async function (req, res, next) {});
+router.delete("/characters:id", async function (req, res, next) {});
+router.post("/characters:id", async function (req, res, next) {});
 
 module.exports = router;
