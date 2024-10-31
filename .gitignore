@@ -1,6 +1,11 @@
 #ENV files
 .env
 *.env
+
+#Docker files since we're for now deploying locally with CLI
+dockerfile
+*/dockerfile
+
 #keys 
 */key
 # Main folder .gitignore
