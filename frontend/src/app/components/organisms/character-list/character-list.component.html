@@ -1,2 +1,7 @@
 <div class="cardList__container">
+  <app-character-card
+    class="cardList__card"
+    *ngFor="let char of characters"
+    [character]="char"
+  ></app-character-card>
 </div>
