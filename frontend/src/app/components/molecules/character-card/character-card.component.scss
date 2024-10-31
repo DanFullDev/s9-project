@@ -2,7 +2,7 @@
   @apply bg-gray-600 flex flex-row justify-start rounded-xl h-full;
 
   .card__image {
-    @apply rounded-l-xl w-32 h-auto sm:w-3 lg:w-full;
+    @apply rounded-l-xl w-auto h-auto sm:w-3 lg:w-full;
   }
 
   .card__description {
@@ -44,5 +44,9 @@
         @apply text-gray-400 font-bold;
       }
     }
+  }
+
+  .card__buttons {
+    @apply pr-3 pt-2 flex flex-col gap-2;
   }
 }

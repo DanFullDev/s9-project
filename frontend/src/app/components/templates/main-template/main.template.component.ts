@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FooterComponent } from '../../organisms/footer/footer.component';
 import { HeaderComponent } from '../../organisms/header/header.component';
-import { ModalComponent } from '../../organisms/modal/modal.component';
+import { ModalComponent } from '../../molecules/modal/modal.component';
 import { CharacterListComponent } from '../../organisms/character-list/character-list.component';
 
 @Component({
