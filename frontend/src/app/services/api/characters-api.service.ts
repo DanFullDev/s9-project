@@ -7,13 +7,13 @@ import { Character } from '../../models/character.model';
   providedIn: 'root',
 })
 export class CharactersApiService {
-  private apiURL: string = 'https://rickandmortyapi.com/api/character/?page=1';
+  private apiURL: string = 'https://rickandmortyapi.com/api/character';
 
   constructor(private http: HttpClient) {}
 
-  getCharacters(): Observable<Character[]> {
+  getCharacters(pageNumber: number = 1): Observable<Character[]> {
     return this.http
-      .get<{ results: Character[] }>(this.apiURL)
+      .get<{ results: Character[] }>(`${this.apiURL}/?page=${pageNumber}`)
       .pipe(map((response) => response.results));
   }
 }
