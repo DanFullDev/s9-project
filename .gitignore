@@ -2,7 +2,7 @@
 .env
 *.env
 #keys 
-*/keys
+*/key
 # Main folder .gitignore
 # Ignore node_modules across all projects
 */node_modules/
