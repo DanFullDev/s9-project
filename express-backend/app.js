@@ -3,17 +3,20 @@ const express = require("express");
 
 const path = require("path");
 const cookieParser = require("cookie-parser");
-const logger = require("morgan");
-const characterRoutes = require("./routes/index");
+const characterRoutes = require("./routes/characters");
 
 const app = express();
 
-app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "views")));
 
+app.set("view engine", "pug");
+
+app.use("/", (req, res) => {
+  res.render("index");
+});
 app.use("/api", characterRoutes);
 
 // catch 404 and forward to error handler
