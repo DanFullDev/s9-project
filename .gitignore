@@ -5,6 +5,8 @@
 #Docker files since we're for now deploying locally with CLI
 dockerfile
 */dockerfile
+.dockerignore
+*/.dockerignore
 
 #keys 
 */key

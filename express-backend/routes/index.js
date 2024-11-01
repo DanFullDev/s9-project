@@ -1,13 +1,36 @@
 const express = require("express");
-const db = require("./public/javascripts/firebaseAdmin.js");
+const db = require("../public/javascripts/firesbaseAdmin");
 
 const router = express.Router();
 
-router.get("/characters/all", async (req, res) => {
+router.get("/characters", async (req, res) => {
   try {
-    const charactersSnapshot = await db.collection("characters").get();
-    const characters = charactersSnapshot.docs.map((doc) => doc.data());
-    res.status(200).json(characters);
+    const pageSize = parseInt(req.query.pageSize) || 10;
+    const lastVisible = req.query.lastVisible || null; 
+
+    let query = db.collection("characters").orderBy("id").limit(pageSize);
+
+    if (lastVisible) {
+      const lastVisibleDoc = await db
+        .collection("characters")
+        .doc(lastVisible)
+        .get();
+      if (lastVisibleDoc.exists) {
+        query = query.startAfter(lastVisibleDoc);
+      } else {
+        return res.status(400).send("Invalid lastVisible ID.");
+      }
+    }
+
+    const snapshot = await query.get();
+
+    const characters = snapshot.docs.map((doc) => doc.data());
+    const newLastVisible = snapshot.docs[snapshot.docs.length - 1]?.id || null;
+
+    res.status(200).json({
+      characters,
+      lastVisible: newLastVisible, 
+    });
   } catch (error) {
     res.status(500).send("Error fetching characters: " + error.message);
   }
